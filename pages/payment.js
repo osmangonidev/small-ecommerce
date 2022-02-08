@@ -214,7 +214,7 @@ export default function Pyment() {
                       {paymentMethods &&
                         paymentMethods.map((method) => {
                           return (
-                            <option value={method.id}>{method.name}</option>
+                            <option key={method.id} value={method.id}>{method.name}</option>
                           );
                         })}
                     </select>
@@ -242,7 +242,7 @@ export default function Pyment() {
                       {shippingMethods &&
                         shippingMethods.map((method) => {
                           return (
-                            <option value={method.id}>{method.name}</option>
+                            <option key={method.id} value={method.id}>{method.name}</option>
                           );
                         })}
                     </select>
@@ -272,7 +272,7 @@ export default function Pyment() {
                       {shippingAddress &&
                         shippingAddress.map((address) => {
                           return (
-                            <option value={address.id}>
+                            <option key={address.id} value={address.id}>
                               {address.street_address_1}
                             </option>
                           );
@@ -302,7 +302,7 @@ export default function Pyment() {
                       {billingAddress &&
                         billingAddress.map((address) => {
                           return (
-                            <option value={address.id}>
+                            <option key={address.id} value={address.id}>
                               {address.street_address_1}
                             </option>
                           );
